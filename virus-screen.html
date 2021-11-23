@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>СКАЧАЙ 16ГБ ОПЕРАТИВКИ</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000;
+        }
+
+        .blue-screen {
+            width: 100vw;
+        }
+
+        .blue-screen img {
+            width: 100%;
+        }
+
+        .blue-screen h1 {
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 35%;
+            background-color: #fff;
+        }
+
+        .download-ram-btn {
+            height: 30px;
+            width: 200px;
+            font-size: 16px;
+            background-color: #3176b6;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .download-ram-btn:hover {
+            background-color: #0e3a5b;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="blue-screen hidden" id="blueScreen">
+    <img src="https://assets2.rockpapershotgun.com/bsod.png/BROK/thumbnail/1600x900/format/jpg/quality/80/bsod.png">
+    <h1>Твій компуктер заблоковано через занадто гарні очі!!</h1>
+</div>
+<button id="downloadRamBtn" onclick="downloadRam()" class="download-ram-btn">
+    Скачати оперативку
+</button>
+
+<script>
+    function downloadRam() {
+        document.getElementById('downloadRamBtn').classList.add('hidden');
+        document.getElementById('blueScreen').classList.remove('hidden');
+
+        document.documentElement.requestFullscreen();
+    }
+</script>
+</body>
+</html>
